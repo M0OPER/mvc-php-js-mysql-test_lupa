@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Entradas</title>
+    <title>HOME</title>
   </head>
   <body>
     <?php 
@@ -13,14 +13,9 @@
       error_reporting(E_ALL);
     } 
 
-    require_once("../components/head.php"); require_once("../db/db.php"); require_once("../controllers/entradas_ctl.php"); ?>
+    require_once("../components/head.php"); require_once("../db/db.php"); ?>
     
-    <h1>ENTRADAS</h1>
-    <?php
-      foreach ($datos as $dato) {
-        echo $dato["ent_titulo"]; 
-      } 
-    ?>
+    <h1>HOME</h1>
     <?php require_once("../components/foot.php");  ?>
   </body>
 </html>

@@ -14,6 +14,12 @@ class Conectar{
       </div>
     </div>');
     }
+    @date_default_timezone_set('America/Bogota');
+    @set_time_limit(60);
+    @ini_set('max_execution_time', 60);
+    @ini_set("session.cookie_lifetime","20000");
+    @ini_set("session.gc_maxlifetime","20000");
+    @session_start();
     return $conexion;
   }
 }
