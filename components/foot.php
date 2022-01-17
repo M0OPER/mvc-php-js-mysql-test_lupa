@@ -1,8 +1,10 @@
 <?php
 
-echo('<nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+echo('<nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-dark">
 <div class="container-fluid">
-  F  O  O  T  E  R
+<div class="col-sm" align="right">
+<h6 class="text-white">Creado por Edwin Montes </h6>
+</div>
 </div>
 </nav>');
 

@@ -7,7 +7,7 @@ class entradas_model{
 
   public function __construct(){
     $this->db=Conectar::conexion();
-    $this->entradas=array();
+    $this->entradas = array();
   }
 
   public function get_entradas(){
@@ -17,6 +17,9 @@ class entradas_model{
     }
     return $this->entradas;
   }
+
+
+  
 }
 
 ?>

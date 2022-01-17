@@ -1,16 +1,8 @@
-<?php 
-require_once("../db/db.php"); 
-
-$con = new Conexion();
-$con->initial();
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>HOME</title>
+    <title>REGISTRO</title>
   </head>
   <body>
     <?php 
@@ -21,11 +13,9 @@ $con->initial();
       error_reporting(E_ALL);
     } 
 
+    require_once("../components/head.php"); require_once("../db/db.php"); ?>
     
-
-    require_once("../components/head.php"); ?>
-    
-    <h1>HOME</h1>
+    <h1>REGISTRO</h1>
     <?php require_once("../components/foot.php");  ?>
   </body>
 </html>

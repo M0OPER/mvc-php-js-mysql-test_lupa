@@ -11,7 +11,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">REGISTRARSE</button>
-        <button type="button" class="btn btn-primary">INGRESAR</button>
+        <form action="<?=URL?>db/initial" method="POST"><button name="submit" type="submit" class="btn btn-primary">INGRESAR</button></form>
+        
       </div>
     </div>
   </div>
