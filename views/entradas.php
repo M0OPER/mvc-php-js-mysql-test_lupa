@@ -6,7 +6,9 @@
   </head>
   <body>
     <?php
-            foreach ($datos as $dato) {
-                echo $dato["nombre"]."<br/>"; } ?>
+      foreach ($datos as $dato) {
+        echo $dato["ent_titulo"]; 
+      } 
+    ?>
   </body>
 </html>
