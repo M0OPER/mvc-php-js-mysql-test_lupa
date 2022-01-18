@@ -30,6 +30,7 @@
               class="form-control"
               id="loginUsuario"
               aria-describedby="emailHelp"
+              required
             />
           </div>
           <div class="mb-3">
@@ -40,6 +41,7 @@
               type="password"
               class="form-control"
               id="loginPassword"
+              required
             />
           </div>
         </div>

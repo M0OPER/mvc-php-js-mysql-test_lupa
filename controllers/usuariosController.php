@@ -15,7 +15,7 @@ class UsuariosController{
     $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : '';
     $password   = isset($_POST['password']) ? $_POST['password'] : '';
     if ($usuario == "" || $password == "") {
-      return json_encode(array("res" => true, "men" => "Verifica que los campos no esten vacíos"));
+      return json_encode(array("res" => false, "men" => "Verifica que los campos no esten vacíos"));
     }else{
       $datos = $this->usuario->validar_datos($usuario, $password);
       if ($datos) {
