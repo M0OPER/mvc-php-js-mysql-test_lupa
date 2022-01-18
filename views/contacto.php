@@ -21,6 +21,15 @@ $con->initial();
       error_reporting(E_ALL);
     } 
 
+    // Settings
+    ini_set("SMTP", "aspmx.l.google.com");
+    ini_set("sendmail_from", "godred12994@gmail.com");
+    $message = "The mail message was sent";
+
+    $headers = "From: godred12994@gmail.com";
+
+    //mail("edwinrafaelmontesmeza@gmail.com", "Testing", $message, $headers);
+
     require_once("../components/head.php"); ?>
 
 <div class="" tabindex="-1">
@@ -31,7 +40,7 @@ $con->initial();
             <form>
 
               <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label"
+                <label for="nombres" class="col-sm-2 col-form-label"
                   >Nombres</label
                 >
                 <div class="col-sm-10">
@@ -44,7 +53,7 @@ $con->initial();
               </div>
 
               <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label"
+                <label for="email" class="col-sm-2 col-form-label"
                   >Email</label
                 >
                 <div class="col-sm-10">
@@ -73,5 +82,6 @@ $con->initial();
     </div>    
     
     <?php require_once("../components/foot.php");  ?>
+    <script src="../public/js/contacto.js"></script>
   </body>
 </html>

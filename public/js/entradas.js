@@ -35,4 +35,35 @@ window.addEventListener("load", function () {
         };
       });
   }
+
+  if (document.getElementsByClassName("eliminar")) {
+    for (let el of document.getElementsByClassName("eliminar")) {
+      el.addEventListener("click", clic);
+    }
+
+    function clic(event) {
+      var formData = new FormData();
+      var id = this.getAttribute("id");
+      formData.append("c", "entradas");
+      formData.append("a", "eliminar");
+      formData.append("id", id);
+      ajax.open("POST", "../includes/front_controller.php", true);
+      ajax.send(formData);
+      ajax.onload = function () {
+        if (ajax.readyState === ajax.DONE) {
+          if (ajax.status === 200) {
+            res = JSON.parse(this.response);
+            if (res.res == true) {
+              window.alert(res.men);
+              location.reload();
+            } else {
+              window.alert(res.men);
+            }
+          } else {
+            console.log(res.men);
+          }
+        }
+      };
+    }
+  }
 });

@@ -12,7 +12,7 @@ class ContactoController{
   }
 
   public function registrar(){ 
-    $nombres    = isset($_POST['nombres']) ? $_POST['nombres'] : '';
+    $nombres    = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $email      = isset($_POST['email']) ? $_POST['email'] : '';
     $mensaje    = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
     if ($nombres == '' || $email == ""|| $mensaje == "") {

@@ -17,6 +17,7 @@ class UsuariosModel{
       $rs = $consulta->fetch_array();
       if ($consulta->num_rows > 0){
         $_SESSION["id"] = $rs['usu_id'];
+        $_SESSION["name"] = $rs['usu_nombres']. " " .$rs['usu_apellidos'];
         return true;
       } else {
         return false;

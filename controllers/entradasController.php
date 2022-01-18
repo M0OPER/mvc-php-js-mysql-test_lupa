@@ -20,6 +20,11 @@ class EntradasController{
     require_once("../components/entradas_usuario.php");
   }
 
+  public function entradaId($id){ // En este caso index va a mostrar todas las entradas
+    $datos = $this->entrada->entradas_idEntrada($id);
+    require_once("../components/entradas_detalle.php");
+  }
+
   public function registrar(){ 
     $titulo      = isset($_POST['titulo']) ? $_POST['titulo'] : '';
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
@@ -45,6 +50,16 @@ class EntradasController{
       }else{
         return json_encode(array("res" => false, "men" => "Error al guardar imagen"));
       }
+    }
+  }
+
+  public function eliminar(){ // En este caso index va a mostrar todas las entradas
+    $id      = isset($_POST['id']) ? $_POST['id'] : '';
+    $datos = $this->entrada->eliminar_entrada($id, $_SESSION["id"]);
+    if ($datos) {
+      return json_encode(array("res" => true, "men" => "Entrada eliminada con exito"));
+    }else{
+      return json_encode(array("res" => false, "men" => "Error al eliminar la entrada"));
     }
   }
 

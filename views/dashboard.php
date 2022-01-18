@@ -99,7 +99,6 @@ $con->userId($_SESSION["id"]);
               accept="image/*"
               class="form-control"
               id="imagen"
-              name="imagen"
             />
           </div>
 

@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
       .getElementById("registrarContacto")
       .addEventListener("click", function () {
         var formData = new FormData();
-        var nombre = document.getElementById("nombre").value;
+        var nombre = document.getElementById("nombres").value;
         var email = document.getElementById("email").value;
         var mensaje = document.getElementById("mensaje").value;
         formData.append("c", "contacto");

@@ -23,8 +23,15 @@ echo('<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="../views/contacto.php">Contacto</a>
       </li>
-    </ul>
-    <form class="d-flex">
+    </ul>');
+
+    if ($_SESSION["status"] == "ON") {
+      echo('<button type="button" class="btn btn-outline-primary"><strong>'. $_SESSION["name"] .'</strong></button>');
+    }else{
+      echo('<button type="button" class="btn btn-outline-primary"><strong>Bienvenido al sistema</strong></button>');
+    }
+
+    echo('<form class="d-flex">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

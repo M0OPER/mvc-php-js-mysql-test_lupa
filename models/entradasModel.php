@@ -30,9 +30,31 @@ class EntradasModel{
     return $this->entradas;
   }
 
+  public function entradas_idEntrada($id){
+    $consulta=$this->db->query("SELECT * FROM entradas WHERE ent_id = $id");
+    while($filas=$consulta->fetch_assoc()){
+      $this->entradas[]=$filas;
+    }
+    return $this->entradas;
+  }
+
   public function registrar_entrada($titulo, $descripcion, $imagen, $autor, $id) {
     try {
-      $consulta = $this->db->query("INSERT INTO entradas VALUES ('', '$titulo', '$imagen', '$descripcion', '', '$autor', $id)");
+      $fecha = date("Y-m-d H:i:s");
+      $consulta = $this->db->query("INSERT INTO entradas VALUES ('', '$titulo', '$imagen', '$descripcion', '$fecha', '$autor', $id)");
+      if ($consulta) {
+        return true;
+      }else{
+        return false;
+      }
+    } catch (\Throwable $th) {
+      return $th;
+    }
+  }
+
+  public function eliminar_entrada($id, $id_user) {
+    try {
+      $consulta = $this->db->query("DELETE FROM entradas WHERE ent_id = $id AND ent_usuario_id = $id_user");
       if ($consulta) {
         return true;
       }else{

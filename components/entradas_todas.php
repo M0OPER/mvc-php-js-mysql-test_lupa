@@ -9,7 +9,7 @@
         <h5 class="card-title">'.$dato["ent_titulo"].'</h5>
         <img style="width: 18rem;" src="'.$dato["ent_imagen"].'" alt="images">
         <p class="card-text">'.$dato["ent_descripcion"].'</p>
-        <a href="#" class="btn btn-primary">VER DETALLES</a>
+        <a href="../views/entrada.php?id='.$dato["ent_id"].'" class="btn btn-primary">VER DETALLES</a>
       </div>
       <div class="card-footer fw-bold">
       '.$dato["ent_fecha"].' - '.$dato["ent_autor"].'

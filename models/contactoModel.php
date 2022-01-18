@@ -13,7 +13,24 @@ class ContactoModel{
 
   public function registrar_contacto($nombres, $email, $mensaje) {
     try {
-      $consulta = $this->db->query("INSERT INTO contacto VALUES ('', '$usuario', '$password', '$nombres', '$apellidos','$email', 'ACTIVO')");
+      $email_to = "godred12994@gmail.com";
+      $email_subject = "Contacto desde el sitio web";
+      $consulta = $this->db->query("INSERT INTO contacto VALUES ('', '$nombres', '$email', '$mensaje')");
+      if ($consulta) {
+
+        // Settings
+        ini_set("SMTP", "aspmx.l.google.com");
+        ini_set("sendmail_from", "godred12994@gmail.com");
+        $message = "The mail message was sent";
+
+        $headers = "From: godred12994@gmail.com";
+
+        mail($email, "Testing", $message, $headers);
+
+        return true;
+      }else{
+        return false;
+      }
     } catch (\Throwable $th) {
       //throw $th;
     }
