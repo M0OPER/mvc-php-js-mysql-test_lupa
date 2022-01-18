@@ -21,11 +21,7 @@ $con->initial();
       error_reporting(E_ALL);
     } 
 
-    
+    require_once("../components/head.php"); require_once("../components/carousel.php"); require_once("../components/foot.php"); ?>
 
-    require_once("../components/head.php"); ?>
-    
-    <h1>HOME</h1>
-    <?php require_once("../components/foot.php");  ?>
   </body>
 </html>

@@ -1,7 +1,7 @@
 <?php 
-require_once("../db/db.php"); 
+require_once("../controllers/conexionController.php"); 
 
-$con = new Conexion();
+$con = new ConexionController();
 $con->initial();
 
 ?>
@@ -21,12 +21,12 @@ $con->initial();
       error_reporting(E_ALL);
     } 
 
-    require_once("../components/head.php"); require_once("../db/db.php"); require_once("../controllers/entradas_ctl.php"); ?>
+    require_once("../components/head.php"); require_once("../controllers/entradasController.php"); ?>
 
 <?php 
 
-$con = new entradasController();
-$con->index();
+$con = new EntradasController();
+$con->todas();
 
 ?>
     

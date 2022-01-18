@@ -1,17 +1,12 @@
 
-<?php if(!$_SESSION["status"] == "OFF"){echo "Primero necesita logearse<a href='../inicio/'><button>Regresar al inicio</button></a>";
-  //die();
-  } ?>
+
   
 <?php 
 
-echo("HEAD->".$_SESSION["status"]);
-
 echo('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">');
 echo('<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>');
-include_once("general.php");
 
-echo('<nav class="navbar navbar-expand-lg navbar-light bg-light">
+echo('<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
 <div class="container-fluid">
   <a class="navbar-brand" href="#">INNO BLOGS</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +34,11 @@ echo('<nav class="navbar navbar-expand-lg navbar-light bg-light">
       if ($_SESSION["status"] == "OFF") {
         echo('<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar sesion</a></li>
-        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrarse</a></li>
+        <li><a class="dropdown-item" href="../views/register.php">Registrarse</a></li>
       </ul>');
       }else{
         echo('<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Mis entradas</a></li>
+        <li><a class="dropdown-item" href="../views/dashboard.php">Dashboard</a></li>
         <li><button id="cerrarSesion" class="dropdown-item" type="button" name="logout" >Cerrar sesion</button></li>
       </ul>');
       }
@@ -56,5 +51,7 @@ echo('</li>
   </div>
 </div>
 </nav>');
+
+include_once("general.php");
 
 ?>

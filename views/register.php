@@ -1,3 +1,8 @@
+<?php 
+require_once("../controllers/conexionController.php"); 
+
+$con = new ConexionController();
+$con->initial(); ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,9 +18,90 @@
       error_reporting(E_ALL);
     } 
 
-    require_once("../components/head.php"); require_once("../db/db.php"); ?>
-    
-    <h1>REGISTRO</h1>
+    require_once("../components/head.php"); ?>
+
+    <div class="" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header shadow">REGISTRO AL SISTEMA</div>
+          <div class="modal-body">
+            <form>
+
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label"
+                  >Nombres</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    id="nombres"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label"
+                  >Apellidos</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    id="apellidos"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label"
+                  >Email</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    id="email"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label"
+                  >Usuario</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usuario"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label"
+                  >Password</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                  />
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer modalFoot" align="center">
+            <button id="registrarUsuario" type="" class="btn btn-success">
+              REGISTRAR
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <?php require_once("../components/foot.php");  ?>
   </body>
 </html>

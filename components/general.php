@@ -21,26 +21,25 @@
       <form>
         <div class="modal-body">
           <div class="mb-3">
-            <label for="lblUser" class="form-label"
+            <label for="loginUsuario" class="form-label"
               >Usuario</label
             >
             <input
             name="user"
               type="text"
               class="form-control"
-              id="lblUser"
+              id="loginUsuario"
               aria-describedby="emailHelp"
             />
           </div>
           <div class="mb-3">
-            <label for="lblPass" class="form-label"
+            <label for="loginPassword" class="form-label"
               >Password</label
             >
             <input
-            name="pass"
               type="password"
               class="form-control"
-              id="lblPass"
+              id="loginPassword"
             />
           </div>
         </div>
