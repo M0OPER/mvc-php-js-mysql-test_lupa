@@ -1,3 +1,11 @@
+<?php 
+require_once("../db/db.php"); 
+
+$con = new Conexion();
+$con->initial();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -14,13 +22,15 @@
     } 
 
     require_once("../components/head.php"); require_once("../db/db.php"); require_once("../controllers/entradas_ctl.php"); ?>
+
+<?php 
+
+$con = new entradasController();
+$con->index();
+
+?>
     
-    <h1>ENTRADAS</h1>
-    <?php
-      foreach ($datos as $dato) {
-        echo $dato["ent_titulo"]; 
-      } 
-    ?>
+    
     <?php require_once("../components/foot.php");  ?>
   </body>
 </html>

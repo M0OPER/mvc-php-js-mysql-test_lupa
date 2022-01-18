@@ -5,10 +5,6 @@
   
 <?php 
 
-if (isset($_POST['iniciarSesion'])) {
-  echo("working");
-}
-
 echo("HEAD->".$_SESSION["status"]);
 
 echo('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">');
@@ -44,12 +40,11 @@ echo('<nav class="navbar navbar-expand-lg navbar-light bg-light">
         echo('<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar sesion</a></li>
         <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrarse</a></li>
-        
       </ul>');
       }else{
         echo('<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" href="#">Mis entradas</a></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+        <li><button id="cerrarSesion" class="dropdown-item" type="button" name="logout" >Cerrar sesion</button></li>
       </ul>');
       }
 

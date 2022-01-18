@@ -1,3 +1,10 @@
+<?php 
+require_once("../db/db.php"); 
+
+$con = new Conexion();
+$con->initial();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>

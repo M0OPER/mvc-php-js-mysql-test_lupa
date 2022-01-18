@@ -1,16 +1,16 @@
 <?php
 
-class entradas_model{
+class entradasModel{
   
   private $db;
   private $entradas;
 
-  public function __construct(){
-    $this->db=Conectar::conexion();
+  public function __CONSTRUCT(){
+    $this->db=Conexion::initial();
     $this->entradas = array();
   }
 
-  public function get_entradas(){
+  public function listar_entradas(){
     $consulta=$this->db->query("select * from entradas;");
     while($filas=$consulta->fetch_assoc()){
       $this->entradas[]=$filas;
