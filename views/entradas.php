@@ -23,7 +23,11 @@ $con->initial();
 
     require_once("../components/head.php"); require_once("../controllers/entradasController.php"); ?>
 
+<h3>TODAS LAS ENTRADAS</h3>
+    <hr>
+
 <?php 
+
 
 $con = new EntradasController();
 $con->todas();

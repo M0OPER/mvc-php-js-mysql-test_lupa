@@ -34,7 +34,7 @@ $con->initial(); ?>
                 <div class="col-sm-10">
                   <input
                     type="text"
-                    class="form-control-plaintext"
+                    class="form-control-plaintext shadow"
                     id="nombres"
                   />
                 </div>
@@ -47,7 +47,7 @@ $con->initial(); ?>
                 <div class="col-sm-10">
                   <input
                     type="text"
-                    class="form-control-plaintext"
+                    class="form-control-plaintext shadow"
                     id="apellidos"
                   />
                 </div>
@@ -60,7 +60,7 @@ $con->initial(); ?>
                 <div class="col-sm-10">
                   <input
                     type="text"
-                    class="form-control-plaintext"
+                    class="form-control-plaintext shadow"
                     id="email"
                   />
                 </div>
@@ -73,7 +73,7 @@ $con->initial(); ?>
                 <div class="col-sm-10">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control shadow"
                     id="usuario"
                   />
                 </div>
@@ -86,7 +86,7 @@ $con->initial(); ?>
                 <div class="col-sm-10">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control shadow"
                     id="password"
                   />
                 </div>
