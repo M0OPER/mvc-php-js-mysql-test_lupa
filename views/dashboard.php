@@ -124,6 +124,80 @@ $con->userId($_SESSION["id"]);
     </div>
   </div>
 </div>
+
+<!-- Modal Editar Entrada-->
+
+<div
+  class="modal fade"
+  id="modalEditarEntrada"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar entrada</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="editarTitulo" class="form-label"
+              >Titulo</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="editarTitulo"
+              aria-describedby="emailHelp"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="editarDescripcion" class="form-label">Descripcion</label>
+            <textarea class="form-control" id="editarDescripcion" rows="3"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="editarImagen" class="form-label"
+              >Portada</label
+            >
+            <input
+              type="file"
+              accept="image/*"
+              class="form-control"
+              id="editarImagen"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="editarAutor" class="form-label"
+              >Autor</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="editarAutor"
+            />
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button id_entrada="" id="editarEntrada" type="button" class="btn btn-primary">
+            EDITAR ENTRADA
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
     
     <?php require_once("../components/foot.php");  ?>
     <script src="../public/js/entradas.js"></script>

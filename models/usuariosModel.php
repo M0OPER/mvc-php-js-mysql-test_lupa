@@ -30,6 +30,11 @@ class UsuariosModel{
   public function registrar_usuario($usuario, $password, $nombres, $apellidos, $email) {
     try {
       $consulta = $this->db->query("INSERT INTO usuarios VALUES ('', '$usuario', '$password', '$nombres', '$apellidos','$email', 'ACTIVO')");
+      if ($consulta) {
+        return true;
+      } else {
+        return false;
+      }
     } catch (\Throwable $th) {
       //throw $th;
     }
